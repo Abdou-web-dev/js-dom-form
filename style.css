@@ -1,0 +1,68 @@
+input {
+    display: block;
+}
+
+label {
+    display: block;
+}
+
+form {
+    border: .5px solid grey;
+}
+::placeholder{
+    font-size: 20px;
+    color: red;
+}
+
+form input:hover,
+form input:focus {
+    background-color: lightgrey;
+    border-radius: 5;
+    transform: scale(1.05);
+}
+
+form {
+    background-color: rgba(135, 206, 250, 0.5);
+}
+
+form:hover {
+    background-color: rgba(135, 206, 250, 0.281);
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.774);
+    opacity: .6;
+    padding: 8px;
+    font-weight: bolder;
+    position: relative;
+    bottom: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+
+
+/*creating the shake animation*/
+
+div.shake:hover form {
+    animation: shake 0.8s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(65px);
+    }
+
+    50% {
+        transform: translateX(-45px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
